@@ -24,17 +24,16 @@ const HeroAction = namespace('heroState', Action);
 
 @Component
 export default class HeroDetailComponent extends Vue {
-  @Prop() private hero: Hero | null = null;
+    @Prop() private hero: Hero | null = null;
 
-  @HeroAction
-  private saveHero!: (newHero: Hero) => void;
+    @HeroAction private saveHero!: (newHero: Hero) => void;
 
-  constructor() {
-    super();
-  }
+    constructor() {
+        super();
+    }
 
-  private created() {
-    // Event handler
-  }
+    private created() {
+        // Event handler
+    }
 }
 </script>
