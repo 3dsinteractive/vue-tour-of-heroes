@@ -36,9 +36,8 @@ export default class HeroesComponent extends Vue {
 
     @lazyInject(SERVICES.HeroService) private heroService!: HeroService;
 
-    @HeroGetter('allHeroes') private heroes!: Hero[];
-
-    @HeroAction private loadHeroes!: () => void;
+    @HeroGetter('someHeroes') private heroes!: Hero[];
+    @HeroAction('loadHeroes') private loadHeroes!: () => void;
 
     constructor() {
         super();

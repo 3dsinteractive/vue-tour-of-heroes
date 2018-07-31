@@ -18,7 +18,7 @@ export class HeroState implements BaseState<HeroStateModel, RootStateModel> {
         @inject(SERVICES.HeroService) private heroService: HeroService,
     ) {
         const getters: GetterTree<HeroStateModel, RootStateModel> = {
-            allHeroes: (s) => s.heroes.slice(),
+            someHeroes: (s) => s.heroes.slice(),
         };
         const mutations: MutationTree<HeroStateModel> = {
             loadHeroes(s, heroes: Hero[]) {
