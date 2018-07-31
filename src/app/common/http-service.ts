@@ -1,6 +1,8 @@
 import axios, { AxiosInstance } from 'axios';
 import { HttpResponse } from './types';
+import { injectable } from '../../../node_modules/inversify';
 
+@injectable()
 export class HttpService {
     private service: AxiosInstance;
     constructor() {
