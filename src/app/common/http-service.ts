@@ -12,12 +12,12 @@ export class HttpService {
         this.service = service;
     }
 
-    public get(path: string): Promise<HttpResponse> {
-        return this.service.get(path);
+    public get<T>(path: string): Promise<HttpResponse<T>> {
+        return this.service.get<T>(path);
     }
 
-    public patch(path: string, payload: any): Promise<HttpResponse> {
-        return this.service.request({
+    public patch<T>(path: string, payload: any): Promise<HttpResponse<T>> {
+        return this.service.request<T>({
             method: 'PATCH',
             url: path,
             responseType: 'json',
@@ -25,8 +25,8 @@ export class HttpService {
         });
     }
 
-    public post(path: string, payload: any): Promise<HttpResponse> {
-        return this.service.request({
+    public post<T>(path: string, payload: any): Promise<HttpResponse<T>> {
+        return this.service.request<T>({
             method: 'POST',
             url: path,
             responseType: 'json',
